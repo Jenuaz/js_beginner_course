@@ -3,7 +3,7 @@
 ## Variables:
 
 ### First way:	
-```
+```js
 **let** variableName = "value";
 ```
 **let** - allow to change what the variable point to: variableName = "changed".
