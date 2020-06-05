@@ -3,18 +3,22 @@
 ## Variables:
 
 ### First way:	
-```js
-**let** variableName = "value";
+```javascript
+let variableName = "value";
 ```
 **let** - allow to change what the variable point to: variableName = "changed".
 
 ### Second way:
-```**const** variableName = "value";```
+```javascript
+const variableName = "value";
+```
 **const** - prohibits us to change pointer so : variableName = "changed"; <--- give us Error.
 
 ### Third way:	
-		```**var** variableName = "Something here";```
-       		**var** - is oldes way to declare variable;
+```javascript
+**var** variableName = "Something here";
+```
+**var** - is oldes way to declare variable;
 
 ## Naming rules:
 
