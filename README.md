@@ -3,7 +3,9 @@
 ## Variables:
 
 ### First way:	
-```**let** variableName = "value";```
+```
+**let** variableName = "value";
+```
 **let** - allow to change what the variable point to: variableName = "changed".
 
 ### Second way:
