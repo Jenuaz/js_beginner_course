@@ -22,11 +22,11 @@ const variableName = "value";
 
 ## Naming rules:
 
-                functions, property or variable starts with:
-                - letter;
-                - $ <-- sign;
-                - _ <-- underscore; 
-                [ after the first character you are free to use (numbers, letters, dollar signs or underscores ]
+### Functions, property or variable starts with:
+- letter;
+- $ <-- sign;
+- _ <-- underscore; 
+\[ after the first character you are free to use (numbers, letters, dollar signs or underscores)\]
         #Comments:
 	```
                 // One line comment;
