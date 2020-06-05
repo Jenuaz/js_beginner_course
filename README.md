@@ -22,8 +22,9 @@ JS: [Functional programming]
                    can be devided too.
                 */
 
-        Statements: in JS end in a ; Based on the ECMAScript rules however, adding ; IS'T REQUIRED.
-        In some cases ommiting a semicolon can cause some problems: Automatic Semicolon Insertion (ASI) which means that semicolon will be automatically added where JS think it's should be. So better to put ; rather than do not use it.
+        Statements: in JS end in a ; Based on the ECMAScript rules however, adding ';' <- IS'T REQUIRED.
+        In some cases ommiting a semicolon can cause some problems: Automatic Semicolon Insertion (ASI) which means
+ that semicolon will be automatically added where JS think it's should be. So better to put -> ';' rather than do not.
 !Use tool 'Prettier' - which put ; where it necessary.
 
         Output:
