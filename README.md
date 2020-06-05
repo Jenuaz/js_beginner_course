@@ -26,7 +26,7 @@ JS: [Functional programming]
 | What we discover | Elements |Description |
 | --- | --- | ---|
 | Variables declaration | let variableName = "value"; | let - allow to change what the variable point to: variableName = "changed" |
-| --- | else | desc |
+|| else | desc |
 | `git diff` | Show file differences that **haven't been** staged |
 
         Statements: in JS end in a ; Based on the ECMAScript rules however, adding ';' <- IS'T REQUIRED.
