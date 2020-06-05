@@ -1,4 +1,5 @@
-##JS: [Functional programming]
+#JS
+[Functional programming]
 
         #Variables:
                 First way: let variableName = "value";
