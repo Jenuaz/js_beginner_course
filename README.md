@@ -1,10 +1,8 @@
-#JS
-[Functional programming]
-
-        #Variables:
-                First way: let variableName = "value";
-                let - allow to change what the variable point to: variableName = "changed";
-                Second way: const variableName = "value";
+#JS Functional programming
+	#Variables:
+		First way: let variableName = "value";
+		let - allow to change what the variable point to: variableName = "changed".
+		Second way: const variableName = "value";
                 const - prohibits us to change pointer so : variableName = "changed"; <--- give us Error.
                 Third way: var variableName = "Something here";
                 var - is oldes way to declare variable;
