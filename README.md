@@ -2,14 +2,15 @@
 
 ## Variables:
 
-	### First way:	let variableName = "value";
-			let - allow to change what the variable point to: variableName = "changed".
+### First way:	let variableName = "value";
+		let - allow to change what the variable point to: variableName = "changed".
 
-	### Second way: const variableName = "value";
-        		const - prohibits us to change pointer so : variableName = "changed"; <--- give us Error.
+### Second way: const variableName = "value";
+       		const - prohibits us to change pointer so : variableName = "changed"; <--- give us Error.
 
-        ### Third way:	var variableName = "Something here";
-        		var - is oldes way to declare variable;
+### Third way:	var variableName = "Something here";
+       		var - is oldes way to declare variable;
+
 ## Naming rules:
 
                 functions, property or variable starts with:
