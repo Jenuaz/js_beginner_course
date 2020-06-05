@@ -16,7 +16,7 @@ const variableName = "value";
 
 ### Third way:	
 ```javascript
-**var** variableName = "Something here";
+var variableName = "Something here";
 ```
 **var** - is oldes way to declare variable;
 
@@ -38,7 +38,7 @@ let variable = "any"; //One line comment
 ```
 
 # Statements: 
-	In JS end in a ; Based on the ECMAScript rules however, adding ';' <- IS'T REQUIRED.
+	In JS code ends with an ';' based on the ECMAScript rules. However, adding ';' <- IS'T REQUIRED.
 In some cases ommiting a semicolon can cause some problems - Automatic Semicolon Insertion (ASI) which means
 that semicolon will be automatically added where JS think it's should be. So better to put -> ';' rather than do not.
 !Use tool 'Prettier' - which put ; where it necessary.
@@ -61,27 +61,5 @@ When creating web application, the use of console.* critical for quickly debuggi
 Google Chrome - Ctrl + Shift + i
 Firefox - Crtl + Shift + k
 ```
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
