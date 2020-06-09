@@ -66,9 +66,6 @@ When creating web application, the use of ```console.*``` critical for quickly d
 Google Chrome - Ctrl + Shift + i
 Firefox - Crtl + Shift + k
 ```
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
 # So what can it really do?
 
 The core client-side JS language consists of some common programming features that allow you to do thing like:
@@ -86,5 +83,34 @@ function addName(tmp){
 ```
 - Running code in response to certain events occurring on a web page. We use 'click' event in our
 example [here](https://github.com/Jenuaz/js_beginner_course/tree/master/01_JS_FirstSteps/ex00) to detect when the button is clicked and then run code that updates the text.
+
+What is even more exciting however is the functionality build on top of the client-side JS language. ***APIs***
+(Application Programming Interfaces) provide you with extra tools to use in your JS code. APIs are ready-made sets
+of code building blocks that allow a developer to implement programms that would otherwise be hard or impossible
+to implement. They do the same thing for programming that ready-made furniture kits do fore home building - it is much
+easier to take ready-cut panels and screw them together to make a bookshelf tham it is to work out the design yourself,
+go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then 
+put them together to make a bookshelf.
+APIs generally fall in two categories:
+- Browser APIs (Core JS language).
+- 3rd party APIs.
+
+***Browswe APIs*** are build into your web browser, and are able to expose data from the surrounding computer environment,
+or do useful complex things. For example:
+- The ***DOM (Document Object Model) API*** allows you to manipulate HTML and CSS, creating, removing and changing HTML,
+dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page, or some new content
+displayed that's DOM in action.
+- ***Geolocation API*** retrives geolocation information. This is how Google Maps is able to find your location and plot
+it on a map.
+- ***Canvas*** and ***WebGL*** APIs allow you to create animated 2D and 3D graphics. People are doing some amazing things useing 
+these web technologies - see Chrome Experiments and webglsamples.
+- Audio and Video APIs like HTMLMediaElement and WebRTC allow you to do really interesting things with mutimedia, such as play 
+audio and video right in a web page, or grab video from your web camera and display it on someone else's computer.
+
+***Third party APIs*** are not built into the browser by default, and you generally have to grab their code and information from
+somewhere on the Web example:
+- Twitter API allows you to do things like displaying your lates tweets on your website. 
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 
