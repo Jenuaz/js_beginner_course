@@ -1,5 +1,10 @@
 # JS Functional programming
 
+Basics to have understanding how to work with JS. Some insights:
+- What variables exist?
+- Basics rules.
+
+
 ## Variables:
 
 ### First way:	
@@ -55,7 +60,7 @@ console.warn("Sending warring to a console");
 console.error("Sending error message to the console");
 console.trace(); //allow to view currrent stack trace.
 ```
-When creating web application, the use of console.* critical for quickly debugging problems. *
+When creating web application, the use of ```console.*``` critical for quickly debugging problems.
 # Console statements:
 ```
 Google Chrome - Ctrl + Shift + i
@@ -63,3 +68,23 @@ Firefox - Crtl + Shift + k
 ```
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+# So what can it really do?
+
+The core client-side JS language consists of some common programming features that allow you to do thing like:
+- Store useful values inside variables. 
+```javascript
+let name = prompt('any value here');
+```
+- Operations on pieces of text (known as "strings" in programming). For example:
+```javascript
+function addName(tmp){
+	let name = 'Player name: ' + tmp;
+	return name; 				//the result of it will be new value of variable name 
+						//"Player name: {stored value of tmp variable}"
+}
+```
+- Running code in response to certain events occurring on a web page. We use 'click' event in our
+example [here](https://github.com/Jenuaz/js_beginner_course/tree/master/01_JS_FirstSteps/ex00) to detect when the button is clicked and then run code that updates the text.
+
+
