@@ -1,65 +1,54 @@
-# JS Functional programming
+# JS definition
+JavaScript is a scripting or programming language that allows you to implement complex features on web pages.
+Every time a web page does more than just sit there and display static information for you to look at - dis -
+playing timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. - 
+you can bet that JS is probably involved. It is a third layer of the layer cake of standard web technologies,
+two of which (HTML and CSS):
 
-## Variables:
+```html
+<!--
 
-### First way:	
-```javascript
-let variableName = "value";
-```
-**let** - allow to change what the variable point to: variableName = "changed".
+		 ^
+		(I) <-- JS
+		| |		
+	 _______| |______
+	/		 \
+	|\|/|\\|/|/|/||\\|<-- CSS
+	|		 |
+	|	WEB	 |
+	|		 |<-- HTML	
+	------------------
 
-### Second way:
-```javascript
-const variableName = "value";
-```
-**const** - prohibits us to change pointer so : variableName = "changed"; <--- give us Error.
-
-### Third way:	
-```javascript
-var variableName = "Something here";
-```
-**var** - is oldes way to declare variable;
-
-## Naming rules:
-
-### Functions, property or variable starts with:
-- letter;
-- $ <-- sign;
-- _ <-- underscore; 
-\[ after the first character you are free to use (numbers, letters, dollar signs or underscores)\]
-# Comments:
-```javascript
-// One line comment;
-let variable = "any"; //One line comment
-/* 
- multy comment lines
- can be devided too.
-*/
+-->
 ```
 
-# Statements: 
-	In JS code ends with an ';' based on the ECMAScript rules. However, adding ';' <- IS'T REQUIRED.
-In some cases ommiting a semicolon can cause some problems - Automatic Semicolon Insertion (ASI) which means
-that semicolon will be automatically added where JS think it's should be. So better to put -> ';' rather than do not.
-!Use tool 'Prettier' - which put ; where it necessary.
+**HTML** is markup language that we use to structure and give meaning to our web page content, for example 
+defining paragraphs, headings, and data tables, or embedding images and videos in the page.
+**CSS** is a language of style rules that we use to apply styiling to out HTML content, for exmaple setting 
+background colors and fonts, and laying out our content in multiple columns.
+**JS** is a scripting language that enables you to create dynamically updating content, control multimedia,
+animate images, and pretty much everyting else.
 
-# Output:
-```javascript
-console.* methods output information to a console. 
+The threee layers build on top pf one another. Let's take a simple text label as an example. We can mark it 
+up using HTML to give it structure and purpose:
+```html
+<p> Player 1: Chris</p>
 ```
-## Example:
-```javascript
-console.log("This is log message"); //this will print out a message 
-!More commonly it is used to show the current value of a variable when debugging.
-console.warn("Sending warring to a console");
-console.error("Sending error message to the console");
-console.trace(); //allow to view currrent stack trace.
+
+Then we can add some CSS into the mix to get it looking nice:
+```css
+p {
+	font-family: 'helvetica neue', helvetica, sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	border: 2px solid rgba(0, 0, 200, 0.6);
+	background: rgba(0, 0, 200, 0.3);
+	color: rgba(0, 0, 200, 0.6);
+	box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+	border-radius: 10px;
+	padding: 3px 10px;
+	display: inline-block;
+	cursor: pointer;
+}
 ```
-When creating web application, the use of console.* critical for quickly debugging problems. *
-# Console statements:
-```
-Google Chrome - Ctrl + Shift + i
-Firefox - Crtl + Shift + k
-```
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
