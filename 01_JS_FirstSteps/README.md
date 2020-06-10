@@ -109,7 +109,46 @@ audio and video right in a web page, or grab video from your web camera and disp
 
 ***Third party APIs*** are not built into the browser by default, and you generally have to grab their code and information from
 somewhere on the Web example:
-- Twitter API allows you to do things like displaying your lates tweets on your website. 
+- Twitter API allows you to do things like displaying your lates tweets on your website.
+- Google Maps API and OpenStreetMap API allows you to embed custom maps into you website.
+
+# What JS doing on your page?
+
+A very common use of JS is to dynamically modify HTML and CSS to update a user interface, via Document Object Model API.
+**NOTE**: code in your web documents is generally loaded and executed in the order it appears on the page. If the JS loads
+and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur.
+
+## Browser security
+
+Each browser tab has its own separate bucket(execution environments) for running code - this mean that in most cases the code
+in each tab is run completely separately, and the code in one tab cannot directly affect the code in another tab - or on another 
+web site. This is a good security measure - if this were not the case, then pirates could start writing code to steal information
+from other websites, and other such bad things.
+***Note***:Possibility of to sand data between different websites/tabs in a safe manner exist anyway for beginner is not a point.
+
+## JavaScript running order
+
+When the browser encounters a block of JS, it generally rins it in order, from top to bottom. This means that you need to be 
+careful what order you put things in. For example:
+
+```javascript
+const para = docunt.querySelector('p');
+
+para.addEventListener('click', updateName);
+
+function updateName() {
+	let name = prompt('Enter a new name');
+	para.textContent = 'Player 1: ' + name;
+} 
+```
+Here we selectiong a text paragraph (line 1), then attaching an event listener to it (line 3) so that when the paragraph is 
+clicked, the UpdateNmae() code block (lines 5-8) is run. The UpdateName(code block - this type of reusable code blocks are called
+ "functions") asks the user for a new name, and then inserts that name into paragraph to update the display.
+If you swapped the order of the first two lines of code, it would no longer work - instead, you'd get an error returned in the 
+browser developer console - **TypeError: para is undefined**. This means that the para object does not exist yet, so we can't add 
+an event listener to it.
+ 
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
