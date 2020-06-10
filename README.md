@@ -108,7 +108,35 @@ JS applied to HTML in a similar manner to CSS. JS needs ***<script>*** element.
 When you will open web-page in browser for you will be available only clickable button. But nothing happen if you 
 click that button. To change it you need to connect a script to web page. To do so you need change our html and 
 insert between ***<head>*** tag ***<script>***.
+
 ***<script>*** tag allow to add external JS which is in external file. For example:
 ```html
 <script src="script.js" defer></script>
-``` 
+```
+
+# Script loading strategies
+
+There are a number of issues involved which getting scripts to load at the right time. A commin problem is that all
+HTML on a page is loaded in the order in which it appears. If you are using JS to manipulate elements on the page 
+(or more accurately, the Document Object Model), your code won't work if the JS is loaded and parsed before the
+HTML you are trying to do something to.
+Here we have magic construction to help:
+```javascript
+document.addEventListener("DOMContentLoaded", function() {
+...
+});
+```
+This is an event listener, which listens for the browser's "DOMContentLoaded" event, which signifies that the
+HTML body is completely loaded and parsed. The JS inside this block will not run until after that event is 
+fired, therefore the error is avoided (you'll learn about events later).
+
+Also here other helpful attribute ***defer*** which tells the browser to continue downloading the HTML content
+once the ***<script>*** tag element has been reached.
+```javascript
+<script src="our.js" defer></script>
+```
+In this case both the script and the HTML will load simultaneously and the code will work.
+
+# async and defer
+***asyc*** and ***defer*** - two modern features we can use to bypass the problem of the blocking script.
+
