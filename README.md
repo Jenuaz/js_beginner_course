@@ -138,5 +138,33 @@ once the ***<script>*** tag element has been reached.
 In this case both the script and the HTML will load simultaneously and the code will work.
 
 # async and defer
-***asyc*** and ***defer*** - two modern features we can use to bypass the problem of the blocking script.
+***async*** and ***defer*** - two modern features we can use to bypass the problem of the blocking script.
+***async*** will download the script without blocking rendering the page and will execute it as soon as the
+script finishes donwloading. You get no guarantee that scripts will run in any specific order, only that they will 
+not stop the rest of the page from displaying. It is best to use **async** when the scripts in the page run inde -
+pendently from each other and depend no on other script on the page.
+Example:
+```javascript
+<script async src='js/vendor/jquery.js'></script>
+<script async src='js/script2.js'></script>
+<script async src='js/script3.js'></script>
+```
+You can't rely on the oreder the sripts will load in. **jqeury.js** may load before or after **script2.js** and
+**script3.js** and if this is the case, any function in those scripts depending on jquery will produce an error
+because jquery will not be defined at the time the script runs.
+**async** should be used when you have a bunch of background scripts to load in, and you just want to get them in 
+place asap. For example, maybe you have some game data files to load, which will be needed when the game actually 
+begins, but for now you just want to get on with showing the game intro, titles, and lobby, without them being blocked
+by script loading.
 
+***defer*** will run scripts in the order they appear in the page and execute them as soon as the script and content are downloaded.
+All scripts with the defer will load in the order they appear on the page. So we can be sure that **jquery.js** will load before 
+**script2.js** e.t.c. They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM
+being in place.
+
+Summary:
+-**async** and **defe** both instruct the browser to download the script(s) in a separate thread, while the rest of the page
+(the DOM, etc.) is downloading, so the page loading is not blocked by the scripts.
+-If your scripts should be run immediately and they don't have any dependencies, then use **async**.
+-If your scripts need to wait for parsing and depend on the other scripts and/or the DOM being in place, load them
+using **defer** and put their corresponding **<script>** elements in the order you want the browser to execute them.
