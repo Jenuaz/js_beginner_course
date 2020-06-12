@@ -18,6 +18,9 @@ let variableName = "value";
 const variableName = "value";
 ```
 **const** - prohibits us to change pointer so : variableName = "changed"; <--- give us Error.
+Constant are used to store values that are immutable or can't be changed and are created with 
+the keyword **const**. We can use constants to store references to parts of our user interface.
+The text inside some of them might change, but the HTML elements referenced stay the same.
 
 ### Third way:	
 ```javascript
