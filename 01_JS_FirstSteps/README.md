@@ -28,6 +28,49 @@ var variableName = "Something here";
 ```
 **var** - is oldes way to declare variable;
 
+### Difference between var and let
+Back when JS was first created, there was only **var**. This works basically fine in most cases,
+but it has some issues in the way it works - it's design can sometimes be confusing or downright
+annoying. So, **let** was created in modern versions of JS, a new keyword for creating variables
+that works somewhat differently to var.
+For start, if you write a multiline JS program that declares and initialize a variable, you can
+actually declare a variable with var after you initialize it and it will still work. For example:
+```javascript
+myName = 'Chris';
+
+function logName(){
+	console.log(myName);
+}
+
+logName();
+
+var myName;
+```
+This works because of hoisting - read var hoisting for more detail on the subject.
+Hoising no longer works with **let**. If we change var to let in the above example,
+it would fail with an error. This is a good thing - declaring a variable after you
+initialize it results in confusing, harder to understand code.
+
+Secondly, when you use **var**, you can declare the same variable as many times as you
+like, but with let you can't. The following would work:
+```javascript
+var myName = 'Chris';
+var myName = 'Bob';
+```
+But the following would throw an error on the second line:
+```javascript
+let myName = 'Chris';
+let myName = 'Bob';
+```
+You have to do this insted:
+```javascript
+let myName = 'Chris';
+myName = 'Bob';
+```
+That's why recommended to use **let** as much as possible in your code, rather than **var**.
+There is no reason to use **var**, unless you need to support old versions of Internet Explorer
+with your code (it doesn't support **let** until verion 11).
+
 ## Naming rules:
 
 ### Functions, property or variable starts with:
@@ -113,9 +156,6 @@ When we are running true/false test we use **comparison** operators:
 |!==|Non-equal (is it not the same?)| 5 !== 2 + 4 // true </br> 'Chris' !== 'Bob' //true </br> 5 !== 2 + 3 //false </br> 2 !== '2' // true; num. vs str|
 | < | Less than | 6 < 10 // true </br> 20 < 10 // true |
 | > | Grater than | 6 > 10 // false </br> 10 > 20 //true |
-
-
-
 
 
 # So what can it really do?
