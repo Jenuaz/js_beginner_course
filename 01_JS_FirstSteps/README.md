@@ -109,10 +109,7 @@ name = name + ' says hello!'; // here first name assign operational result of na
 When we are running true/false test we use **comparison** operators:
 |Operator | Name | Example |
 | --- | --- | --- |
-| ===|Strict equality (is it exactly the same?) | 5 === 2 + 4 // false 
-'Chris' === 'Bob' //false
-5 === 2 + 3 //true 
-2 === '2' // false; number versus string|
+| ===|Strict equality (is it exactly the same?) | 5 === 2 + 4 // false \\ 'Chris' === 'Bob' //false \\ 5 === 2 + 3 //true \\ 2 === '2' // false; number versus string|
 
 
 
