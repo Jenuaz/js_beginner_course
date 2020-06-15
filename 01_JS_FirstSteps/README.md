@@ -69,6 +69,47 @@ When creating web application, the use of ```console.*``` critical for quickly d
 Google Chrome - Ctrl + Shift + i
 Firefox - Crtl + Shift + k
 ```
+
+# Operators
+JS operators allow us to perform tests, do math, join strings together, and other such things. If you haven't
+already done so, save your code, refresh the page in your browser, and open the developer tools JS console in
+browser using hot keys mentioned above in your browser. Then we can try typing the examples shown below -
+type in each one from "Example" columns as shown, pressing Return/Enter after eah one, and see what results they
+return.
+
+Arithmetic examples:
+| Operator| Name |Example |
+|---|---|---|
+| + |Addition | 1 + 10|
+| - |Substraction | 20 - 10 |
+| * |Multiplication | 3 * 7 |
+| / |Division | 10 / 5 |
+
+You can also use the **+** operator to join text strings together (in programming, this is called **concatenation**).
+Try entering the following lines, one at a time:
+
+```javascript
+let name = 'Bingo';
+name;
+let hello = ' says hello!';
+let greeting = name + hello;
+greeting;			// This last one variable will contain the string "Bingo says hello!"
+```
+
+There are also some shortcut operators available, called **augmented assignment operators**. For example, if you
+want to simply add a new text string to an existing one and return the result, you could do this:
+```javascript
+name += ' says hello!';
+```
+This is equivalent to:
+```javascript
+name = name + ' says hello!'; // here first name assign operational result of name content in the past and ' says hello!' string.
+			      // new value of variable name is 'Bingo says hello!'
+```
+When we are running true/false test we use **comparison** operators:
+
+
+
 # So what can it really do?
 
 The core client-side JS language consists of some common programming features that allow you to do thing like:
