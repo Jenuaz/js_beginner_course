@@ -7,3 +7,8 @@ const lowOrHi = document.querySelector('.lowOrHi');
 const guessSubmit = document.querySelector('.guessSubmit');
 const guessField = document.querySelector('.guessField');
 
+function checkGuess() {
+	alert('I am a placeholder');
+}
+
+
