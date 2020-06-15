@@ -109,7 +109,10 @@ name = name + ' says hello!'; // here first name assign operational result of na
 When we are running true/false test we use **comparison** operators:
 |Operator | Name | Example |
 | --- | --- | --- |
-| ===|Strict equality (is it exactly the same?) | ```javascript 5 === 2 + 4 //false 		``` |
+| ===|Strict equality (is it exactly the same?) | 
+```javascript
+ 5 === 2 + 4 //false 		
+``` |
 
 
 
