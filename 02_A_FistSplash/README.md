@@ -68,4 +68,4 @@ To get all \<p> elements from div element which class is container and this clas
 const pElementsList = document.querySelectorAll('.container  p');
 ```
 In other words we select all p elements nested in class container.
-Good example (here)[https://github.com/Jenuaz/js_beginner_course/tree/master/00_Practice_Material/ex03%5BSelectAllClassElements%5D]
+Good example (here)["https://github.com/Jenuaz/js_beginner_course/tree/master/00_Practice_Material/ex03%5BSelectAllClassElements%5D"]
