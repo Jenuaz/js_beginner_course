@@ -4,6 +4,34 @@ Basics to have understanding how to work with JS. Some insights:
 - What variables exist?
 - Basics rules.
 
+# What variable is?
+A variable is container for a value, like a number we might use in a sum, or a string that we might
+use part of sentence. But one special thing about variables is that their contained values can
+change.
+Example:
+
+```html
+<button> Press me </button>
+```
+```javascript
+const button = document.querySelector('button');
+
+button.onclick = function() {
+	let name = prompt("What is your name");
+	alert('Hello' + name + ', nice to see you!');
+}
+```
+
+In this example pressing the button runs a couple of lines of code. The first line pops a box up
+on the screen that asks the reader to enter their name, and them stores the value in a variable.
+The second line displays a welcome message that includes their name, taken from the variable value.
+
+Variables can also contain complex data and even entire functions to do amazing things.
+
+If you declare the variable it exist even if there is no value in it. But if you trying to call
+variable which is not exist at all it will cause the error. For better imagination image variable 
+as box which can contain different stuff.
+
 
 ## Variables:
 

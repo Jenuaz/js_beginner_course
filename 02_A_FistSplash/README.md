@@ -69,3 +69,10 @@ const pElementsList = document.querySelectorAll('.container  p');
 ```
 In other words we select all p elements nested in class container.
 Good example [here](https://github.com/Jenuaz/js_beginner_course/tree/master/00_Practice_Material/ex03%5BSelectAllClassElements%5D)
+
+# OneMore imporvement
+Let's add one more improvement before we get to this discussin. 
+variablename.focus() method to automatically put the text cursor in to \<input> text field as soon
+as the page loads, meaning that the user can start typing thier first guess right away, without having
+to click the form field first. It's only a small addition, but it improves usability - giving the user
+a good visual clue as to what they've got to do to play the game.
