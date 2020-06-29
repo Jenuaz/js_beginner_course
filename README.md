@@ -1,3 +1,16 @@
+# Course
+For this course you need:
+- git;
+- npm;
+- Code editor (VS, Vim, any);
+
+# JS
+
+JS used not only for building an web application. It also use to create native applications for smartphones,
+tablets - a popular technology for this is Apache CORDOVA. JS also can be used to create full-fledged app for
+Mac and Windows desktops, there is no need in browser at all. And special technology to do so is Eletron.
+To write server-side code you can use NODE.js it allow you to create web servers, web APIs, and other services.
+
 # JS definition
 JavaScript is a scripting or programming language that allows you to implement complex features on web pages.
 Every time a web page does more than just sit there and display static information for you to look at - dis -

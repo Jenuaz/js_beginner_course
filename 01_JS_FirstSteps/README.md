@@ -29,9 +29,8 @@ The second line displays a welcome message that includes their name, taken from 
 Variables can also contain complex data and even entire functions to do amazing things.
 
 If you declare the variable it exist even if there is no value in it. But if you trying to call
-variable which is not exist at all it will cause the error. For better imagination image variable 
+variable which is not exist at all it will cause the error. For better understanding image the variable 
 as box which can contain different stuff.
-
 
 ## Variables:
 
@@ -49,6 +48,15 @@ const variableName = "value";
 Constant are used to store values that are immutable or can't be changed and are created with 
 the keyword **const**. We can use constants to store references to parts of our user interface.
 The text inside some of them might change, but the HTML elements referenced stay the same.
+
+Many programming languages have the concept of a constant - a value that once declared can't
+be changed. There are many reasons why you'd want to do this, from security (if a third party
+script changed such values it could cause problems) to debugging and code comprehension ( it is
+harder to accidentally change values that shouldn't be changed and mess things up).
+
+In the early days of JS, constants didn't exist. In modern JS, we have the keyword **const**,
+which lets us store values that can never be changed. **const** works in exactly the same way 
+as let, except that you can't give const a new value.
 
 ### Third way:	
 ```javascript
@@ -139,6 +147,86 @@ When creating web application, the use of ```console.*``` critical for quickly d
 ```
 Google Chrome - Ctrl + Shift + i
 Firefox - Crtl + Shift + k
+```
+
+
+# Variable types
+
+## Numbers 
+
+You can store whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called
+floating point numbers). You don't need to declare variable types in JS, unlike some other programming
+languages. When you give a variable a number value, you don't include quotes.
+
+```javascript
+let age = 18;
+```
+
+## Strings
+
+Strings are pieces of text. When you give a varible a string value, you need to wrap it in a single or
+double qoute marks; otherwise, JS tries to interpret it as another variable name.
+
+```javascript
+let name = "Andergard Vantan"
+```
+
+## Booleans
+
+Booleans are true/false values - they can have two values, true or false. These are generally used to 
+test a condition, after which code is run as appropriate. So for example, a simple case would be:
+
+```javascript
+let someCondition = true;
+```
+
+Whereas in reality it would be used more like this:
+```javascript
+let test = 6 < 4;
+```
+This is using the "less than" operator (**<**) to test whether 6 is less than 4. As you might expect,
+it returns **false**, because 6 is not less than 3!
+
+## Arrays
+
+An array is a single object that contains multiple values enclosed in square brackets and separated
+by commas. Try entering the following lines into you console:
+```javascript
+let myNameArray = ['Chris', 'Bob', 'Jim'];
+let myNumberArray = [10, 15, 40];
+```
+Once these arrays are defined, you can access each value by their location within the array. Try these
+lines:
+```javascript
+myNameArray[0]; //should return 'Chris'
+myNumberArray[2];//sould return 40
+```
+The square brackets specify an index value corresponding to the position of the value you want returned.
+You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
+
+## Objects
+In programming, an object is a structure of code that models a real-life object. You can have a simple
+object that represents a bot and cotains information about its width, length and hight, or you could have
+an object that reoresents a person, and contains data about their name, height, weight, what language they
+speak, how to say hello to them, and more.
+
+```javascript
+let dog = { name: "Spot", breed : 'Dalmatian' }
+```
+To retrive information stored in the object, you can use the following syntax:
+```javascript
+dog.name
+```
+# Dynamic typing
+
+JS is "dynamically typed language", which means that, unlike some other languages, you don't need to specify
+what data type a variable will contain (numbers, strings, arrays, etc.).
+
+We have special opertor called **typeof** - which return the data type of the variable.
+
+```javascript
+let tmp = 10;
+typeof tmp; //output will be "number"
 ```
 
 # Operators
