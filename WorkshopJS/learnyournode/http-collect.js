@@ -1,8 +1,13 @@
-const hyperquest = require('hyperquest')
-    , bl         = require('bl')
-    , url        = process.argv[2];
+var http = require('http')
+var url = process.argv[2]
+var body = ''
 
-hyperquest(url).pipe(bl(function (err, data) {
-  console.log(data.toString())
-}))
-
+http.get(url, function (response) {
+  response.on('data', function (chunk) {
+    body += chunk
+  })
+  response.on('end', function () {
+    console.log(body.length)
+    console.log(body)
+  })
+})

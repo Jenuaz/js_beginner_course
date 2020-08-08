@@ -1,51 +1,66 @@
+var http = require('http')
+var https = require('https')
+
+var url = process.argv[2]
+var prefix = url.substring(0,8)
+
+if (prefix === 'https://'){
+  https.get(url, function (response) {
+    response.on('data', function (data) {
+      console.log(data.toString());
+    })
+  })
+} else {
+  http.get(url, function (response) {
+    response.on('data', function (data) {
+      console.log(data.toString());
+    })
+  })
+}
+
+/*
 var http = require('http');
 
 const regexDoubleSlash = /\/\//g;
 const regexSingleSlash = /\//g;
+const regexThreeW = /www\./g;
 
 function substractHostName(url){
-//	const regexDoubleSlash = /\/\//g;
-//	const regexSingleSlash = /\//g;
-	
 	let index;
 	let path;
 	let host;
-	let hostAndPath = url.substring(url.search(regexDoubleSlash) + 2);
-	console.log('---------->' + hostAndPath);
+	let hostAndPath;
+	if (url.search(regexDoubleSlash) != -1){
+		hostAndPath = url.substring(url.search(regexDoubleSlash) + 2);
+	} else {
+		hostAndPath = url;
+	}
 	index = hostAndPath.search(regexSingleSlash);
-	console.log('---------->' + index);
 	if (index != -1){
 		path = hostAndPath.substring(index);
 		host = hostAndPath.substring(0, index);
-		console.log('\n');
-		console.log('PATH: ' + path);
-		console.log('HOST: ' + host);
 	} else {
-		host = 'www.' + hostAndPath;
-		console.log('HOST: ' + host);
+		if (hostAndPath.search(regexThreeW) == -1){
+			host = 'www.' + hostAndPath;
+		} else {
+			host = hostAndPath;
+		}
 	}
-	console.log(host);
+	//console.log('DEBUG: ' + host);
 	return host;
 }
 
 function substractPath(url){
-//	const regexDoubleSlash = /\/\//g;
-//	const regexSingleSlash = /\//g;
-	
 	let index;
 	let path;
-	let host;
 	let hostAndPath = url.substring(url.search(regexDoubleSlash) + 2);
-	console.log('---------->' + hostAndPath);
 	index = hostAndPath.search(regexSingleSlash);
-	console.log('---------->' + index);
 	if (index != -1){
 		path = hostAndPath.substring(index);
-		console.log('\n');
-		console.log('PATH: ' + path);
 	} else {
 		path = '/';
 	}
+	//console.log('DEBUG: ' + path);
 	return path;
 }
 
@@ -53,21 +68,17 @@ function getOptions(url){
 	let optioner = new Object();
 	optioner.host = substractHostName(url);
 	optioner.path = substractPath(url);
-	console.log('DEBUG: ' + optioner.host);
-	console.log('DEBUG: ' + optioner.path);
+	return optioner;
 }
 
-var options = {
-  host: 'www.google.com',
-  path: '/index.html'
-};
+var options = getOptions(process.argv[2]);
 
-var req = http.get(options, function(res) {
-  console.log('STATUS: ' + res.statusCode);
-  console.log('HEADERS: ' + JSON.stringify(res.headers));
-  getOptions('http://google.com');
+var req = http.get(process.argv[2], function(res) {
+  //console.log('STATUS: ' + res.statusCode);
+  //console.log('HEADERS: ' + JSON.stringify(res.headers)); 
   // Buffer the body entirely for processing as a whole.
   var bodyChunks = [];
+  res.setEncoding('utf8');
   res.on('data', function(chunk) {
     // You can process streamed parts here...
     bodyChunks.push(chunk);
@@ -81,3 +92,4 @@ var req = http.get(options, function(res) {
 req.on('error', function(e) {
   console.log('ERROR: ' + e.message);
 });
+*/
