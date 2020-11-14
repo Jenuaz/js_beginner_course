@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+        <head>
+		<style>
+			.change_tag_attribute {
+				height: 100px;
+				width: 100px;
+				overflow: hidden;
+			}
+			.change_tag_attribute .img_flow {
+				margin-left: -98px;
+			}
+		</style>
+        </head>
+        <body>
+                <main>
+                        <div id="demo"></div>
+			<hr>
+			<div class="change_tag_attribute">
+				<img class="img_flow" src="https://icon-library.net//images/light-off-icon/light-off-icon-24.jpg" height="100px" width="200px"></img>
+			</div>
+			<button onclick="document.getElementsByClassName('img_flow')[0].style.marginLeft = '-10px'">
+				Turn on
+			</button>
+			<button onclick="document.getElementsByClassName('img_flow')[0].style.marginLeft = '-98px'">
+				Turn off
+			</button>
+			<hr>
+                </main>
+                <footer>
+
+                </footer>
+        </body>
+</html>
+
